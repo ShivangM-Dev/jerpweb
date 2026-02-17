@@ -9,6 +9,7 @@ import {
   DialogFooter,
   DialogHeader,
   DialogTitle,
+  DialogTrigger,
 } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -115,7 +116,9 @@ export default function AddClientDialog({ open, onOpenChange, onClientAdded, use
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      {children}
+      <DialogTrigger asChild>
+        {children}
+      </DialogTrigger>
       <DialogContent className="sm:max-w-[500px]">
         <DialogHeader className="pb-4">
           <div className="flex items-center gap-3">
